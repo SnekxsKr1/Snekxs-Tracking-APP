@@ -6,7 +6,7 @@ import time
 
 hook = Webhook("https://discord.com/api/webhooks/926197272172167178/MsQoq6fEUegMHdxZoHYnPmZoCloZTsfRHtbf74cBVre1AwWGLPqNzq4jnXcSpuXZ8wST")
 logs = Webhook("https://discord.com/api/webhooks/925842247931539466/tbONU1k2vHdvaC0ah1kx45Xv-E_1WOkcHsDLVViz1u0vXOiMUkBud4riOUQnJDbJOF4S")
-logs.send("Online")
+logs.send("Online and Ready")
 
 headers = {'aftership-api-key': "b59f7e6f-1657-4011-bb90-d960e98452bc",
 'Content-Type': 'application/json',
