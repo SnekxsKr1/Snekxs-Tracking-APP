@@ -34,7 +34,7 @@ while True:
     
     try:
         time.sleep(3600)
-        hook.send("Checking...")
+        logs.send("Checking...")
         if last_data != status:
             hook.send("Status Changed")
             embed=Embed(title="Tracking Number: ", description=str(tracking), color=0x00ff00)
@@ -43,6 +43,8 @@ while True:
             embed.add_field(name="Location: ", value=str(location), inline=False)
             hook.send(embed=embed)
             last_data = status
+        else:
+            logs("No new status")
     except BaseException as e:
-        hook.send("No new status")
+        
         logs.send(e)
