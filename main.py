@@ -35,8 +35,10 @@ hook.send(embed=embed)
 
 last_data = status
 while True:
+    
     try:
-        time.sleep(100)
+        time.sleep(3600)
+        hook.send("Checking...")
         if last_data != status:
             hook.send("Status Changed") 
             last_data = status
