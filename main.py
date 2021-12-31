@@ -44,7 +44,7 @@ while True:
             hook.send(embed=embed)
             last_data = status
         else:
-            logs("No new status")
+            logs.send("No new status")
     except BaseException as e:
         
         logs.send(e)
