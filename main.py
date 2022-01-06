@@ -13,9 +13,11 @@ headers = {'aftership-api-key': "a43bb64c-8642-4b85-be00-4484558a3df2",
 'Accept': 'application/json'}
 
 
-tracking = "1Z291E2A2001820603"
-carrier = "ups"
+tracking = "304182177157"
+carrier = "4px"
 url = f"https://api.aftership.com/v4/trackings/{carrier}/{tracking}"
+
+print(tracking,carrier)
 
 r = requests.get(url,headers=headers)
 
