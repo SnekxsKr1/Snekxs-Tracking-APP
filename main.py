@@ -8,7 +8,7 @@ hook = Webhook("https://discord.com/api/webhooks/926197272172167178/MsQoq6fEUegM
 logs = Webhook("https://discord.com/api/webhooks/917896501034893362/GtZ6awW0cP-GoTByptzXyV_tH5T4_osODBngJmkyd3GL_hDjE_Yg7ALBHHgvJ6Bm6Zx9")
 logs.send("Online")
 
-headers = {'aftership-api-key': "a43bb64c-8642-4b85-be00-4484558a3df2",
+headers = {'aftership-api-key': "f8ab348f-7582-43d8-b066-cccaf09c70ea",
 'Content-Type': 'application/json',
 'Accept': 'application/json'}
 
