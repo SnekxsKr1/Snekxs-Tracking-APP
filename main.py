@@ -28,11 +28,21 @@ tracking = data["data"]["tracking"]["tracking_number"]
 expected = data["data"]["tracking"]["expected_delivery"]
 status = data["data"]["tracking"]["checkpoints"][-1]["message"]
 location = data["data"]["tracking"]["checkpoints"][-1]["location"]
-
+print(location)
 
 
 last_data = status
 while True:
+
+    r = requests.get(url,headers=headers)
+
+    data = json.loads(r.text)
+
+    tracking = data["data"]["tracking"]["tracking_number"]
+    expected = data["data"]["tracking"]["expected_delivery"]
+    status = data["data"]["tracking"]["checkpoints"][-1]["message"]
+    location = data["data"]["tracking"]["checkpoints"][-1]["location"]
+    
     
     try:
         time.sleep(3600)
