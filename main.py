@@ -8,13 +8,13 @@ hook = Webhook("https://discord.com/api/webhooks/926197272172167178/MsQoq6fEUegM
 logs = Webhook("https://discord.com/api/webhooks/917896501034893362/GtZ6awW0cP-GoTByptzXyV_tH5T4_osODBngJmkyd3GL_hDjE_Yg7ALBHHgvJ6Bm6Zx9")
 logs.send("Online")
 
-headers = {'aftership-api-key': "f8ab348f-7582-43d8-b066-cccaf09c70ea",
+headers = {'aftership-api-key': "4e313efb-e31f-42ac-883c-4d676b041737",
 'Content-Type': 'application/json',
 'Accept': 'application/json'}
 
 
-tracking = "304182177157"
-carrier = "4px"
+tracking = "289086480346"
+carrier = "fedex"
 url = f"https://api.aftership.com/v4/trackings/{carrier}/{tracking}"
 
 print(tracking,carrier)
