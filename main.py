@@ -4,7 +4,7 @@ from pprint import pprint
 import json
 import time
 
-hook = Webhook("https://discord.com/api/webhooks/926197272172167178/MsQoq6fEUegMHdxZoHYnPmZoCloZTsfRHtbf74cBVre1AwWGLPqNzq4jnXcSpuXZ8wST")
+hook = Webhook("https://discord.com/api/webhooks/935683434507018250/hnpk23_ge-kZWsQ2wBDwdZdFGHRdpcXH3UpdoJK_JTvWI0oXR-8_iRW6A_1UXiYwetvo")
 logs = Webhook("https://discord.com/api/webhooks/925842247931539466/tbONU1k2vHdvaC0ah1kx45Xv-E_1WOkcHsDLVViz1u0vXOiMUkBud4riOUQnJDbJOF4S")
 logs.send("Online")
 
