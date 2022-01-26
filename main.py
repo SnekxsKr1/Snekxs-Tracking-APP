@@ -45,7 +45,7 @@ while True:
     
     
     try:
-        time.sleep(3600)
+        time.sleep(1800)
         logs.send("Checking...")
         if last_data != status:
             hook.send("Status Changed")
