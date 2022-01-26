@@ -8,7 +8,7 @@ hook = Webhook("https://discord.com/api/webhooks/935683434507018250/hnpk23_ge-kZ
 logs = Webhook("https://discord.com/api/webhooks/925842247931539466/tbONU1k2vHdvaC0ah1kx45Xv-E_1WOkcHsDLVViz1u0vXOiMUkBud4riOUQnJDbJOF4S")
 logs.send("Online")
 
-headers = {'aftership-api-key': "4e313efb-e31f-42ac-883c-4d676b041737",
+headers = {'aftership-api-key': "ca7cb231-00c0-4e74-b7b8-8549ca62a203",
 'Content-Type': 'application/json',
 'Accept': 'application/json'}
 
@@ -22,7 +22,7 @@ print(tracking,carrier)
 r = requests.get(url,headers=headers)
 
 data = json.loads(r.text)
-
+print(data)
 
 tracking = data["data"]["tracking"]["tracking_number"]
 expected = data["data"]["tracking"]["expected_delivery"]
