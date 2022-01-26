@@ -22,7 +22,7 @@ print(tracking,carrier)
 r = requests.get(url,headers=headers)
 
 data = json.loads(r.text)
-print(data)
+
 
 tracking = data["data"]["tracking"]["tracking_number"]
 expected = data["data"]["tracking"]["expected_delivery"]
