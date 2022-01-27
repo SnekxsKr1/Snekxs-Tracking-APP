@@ -28,6 +28,8 @@ tracking = data["data"]["tracking"]["tracking_number"]
 expected = data["data"]["tracking"]["expected_delivery"]
 status = data["data"]["tracking"]["checkpoints"][-1]["message"]
 location = data["data"]["tracking"]["checkpoints"][-1]["location"]
+link = rr["data"]["tracking"]["courier_tracking_link"]
+statustime = rr["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
 print(location)
 
 
@@ -42,6 +44,8 @@ while True:
     expected = data["data"]["tracking"]["expected_delivery"]
     status = data["data"]["tracking"]["checkpoints"][-1]["message"]
     location = data["data"]["tracking"]["checkpoints"][-1]["location"]
+    link = rr["data"]["tracking"]["courier_tracking_link"]
+    statustime = rr["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
     
     
     try:
@@ -52,7 +56,10 @@ while True:
             embed=Embed(title="Tracking Number: ", description=str(tracking), color=0x00ff00)
             embed.add_field(name="Expected Delivery: ", value=str(expected), inline=False)
             embed.add_field(name="Status: ", value=str(status), inline=False)
+            embed.add_field(name="Checkpoint Time: ",value=str(statustime),inline=False)
             embed.add_field(name="Location: ", value=str(location), inline=False)
+            embed.add_field(name="Carrier Link: ", value=str(link), inline=False)
+            
             hook.send(embed=embed)
             last_data = status
         else:
