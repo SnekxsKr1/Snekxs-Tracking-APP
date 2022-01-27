@@ -28,8 +28,8 @@ tracking = data["data"]["tracking"]["tracking_number"]
 expected = data["data"]["tracking"]["expected_delivery"]
 status = data["data"]["tracking"]["checkpoints"][-1]["message"]
 location = data["data"]["tracking"]["checkpoints"][-1]["location"]
-link = rr["data"]["tracking"]["courier_tracking_link"]
-statustime = rr["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
+link = data["data"]["tracking"]["courier_tracking_link"]
+statustime = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
 print(location)
 
 
@@ -44,8 +44,8 @@ while True:
     expected = data["data"]["tracking"]["expected_delivery"]
     status = data["data"]["tracking"]["checkpoints"][-1]["message"]
     location = data["data"]["tracking"]["checkpoints"][-1]["location"]
-    link = rr["data"]["tracking"]["courier_tracking_link"]
-    statustime = rr["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
+    link = data["data"]["tracking"]["courier_tracking_link"]
+    statustime = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
     
     
     try:
