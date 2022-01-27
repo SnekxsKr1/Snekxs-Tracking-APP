@@ -8,6 +8,7 @@ hook = Webhook("https://discord.com/api/webhooks/935683434507018250/hnpk23_ge-kZ
 logs = Webhook("https://discord.com/api/webhooks/925842247931539466/tbONU1k2vHdvaC0ah1kx45Xv-E_1WOkcHsDLVViz1u0vXOiMUkBud4riOUQnJDbJOF4S")
 logs.send("Online")
 
+
 headers = {'aftership-api-key': "ca7cb231-00c0-4e74-b7b8-8549ca62a203",
 'Content-Type': 'application/json',
 'Accept': 'application/json'}
@@ -30,7 +31,7 @@ status = data["data"]["tracking"]["checkpoints"][-1]["message"]
 location = data["data"]["tracking"]["checkpoints"][-1]["location"]
 link = data["data"]["tracking"]["courier_tracking_link"]
 statustime = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
-print(location)
+logs.send(f"Current Location: {location}")
 
 
 last_data = status
@@ -50,6 +51,7 @@ while True:
     try:
         time.sleep(1800)
         logs.send("Checking...")
+        logs.send(f"Current Location: {location}")
         if last_data != status:
             hook.send("Status Changed")
             embed=Embed(title="Tracking Number: ", description=str(tracking), color=0x00ff00)
