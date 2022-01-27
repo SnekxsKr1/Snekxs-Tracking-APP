@@ -56,9 +56,9 @@ while True:
             embed=Embed(title="Tracking Number: ", description=str(tracking), color=0x00ff00)
             embed.add_field(name="Expected Delivery: ", value=str(expected), inline=False)
             embed.add_field(name="Status: ", value=str(status), inline=False)
-            embed.add_field(name="Checkpoint Time: ",value=str(statustime),inline=False)
+            
             embed.add_field(name="Location: ", value=str(location), inline=False)
-            embed.add_field(name="Carrier Link: ", value=str(link), inline=False)
+            
             
             hook.send(embed=embed)
             last_data = status
