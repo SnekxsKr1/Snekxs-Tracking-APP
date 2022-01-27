@@ -44,8 +44,7 @@ while True:
     expected = data["data"]["tracking"]["expected_delivery"]
     status = data["data"]["tracking"]["checkpoints"][-1]["message"]
     location = data["data"]["tracking"]["checkpoints"][-1]["location"]
-    link = data["data"]["tracking"]["courier_tracking_link"]
-    statustime = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
+    
     
     
     try:
