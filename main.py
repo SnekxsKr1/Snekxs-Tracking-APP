@@ -23,7 +23,7 @@ print(tracking,carrier)
 r = requests.get(url,headers=headers)
 
 data = json.loads(r.text)
-
+discord_name = "<@177520581447647232>"
 
 tracking = data["data"]["tracking"]["tracking_number"]
 expected = data["data"]["tracking"]["expected_delivery"]
@@ -53,7 +53,7 @@ while True:
         logs.send("Checking...")
         
         if last_data != status:
-            hook.send("Status Changed")
+            hook.send(f"Status Changed {discord_name}")
             embed=Embed(title="Tracking Number: ", description=str(tracking), color=0x00ff00)
             embed.add_field(name="Expected Delivery: ", value=str(expected), inline=False)
             embed.add_field(name="Status: ", value=str(status), inline=False)
