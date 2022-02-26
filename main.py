@@ -32,6 +32,7 @@ location = data["data"]["tracking"]["checkpoints"][-1]["location"]
 link = data["data"]["tracking"]["courier_tracking_link"]
 statustime = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
 logs.send(f"Current Location: {location}")
+logs.send(f"Checking Status: {status}")
 
 
 last_data = status
