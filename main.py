@@ -50,7 +50,7 @@ while True:
     
     
     try:
-        time.sleep(1800)
+        time.sleep(600)
         logs.send("Checking...")
         
         if last_data != status:
