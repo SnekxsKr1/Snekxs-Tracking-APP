@@ -66,6 +66,7 @@ while True:
         else:
             logs.send("No new status")
             logs.send(f"Current Location: {location}")
+            logs.send(f"Current Status:  {status}")
     except BaseException as e:
         
         logs.send(e)
