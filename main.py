@@ -1,3 +1,4 @@
+from dis import disco
 import requests
 from dhooks import Webhook, Embed
 import json
@@ -51,10 +52,15 @@ while True:
         time.sleep(1800)
 
         if last_data != status:
-            hook.send(f"Status Changed {discord_name}")
+
             embed = Embed(
-                title="Tracking Number: ", description=str(tracking), color=0x00FF00
+                title=f"Status Changed",
+                description=str(tracking)
+                color=0x00FF00,
             )
+
+            
+
             embed.add_field(
                 name="Expected Delivery: ", value=str(expected), inline=False
             )
@@ -65,10 +71,10 @@ while True:
             hook.send(embed=embed)
             last_data = status
         else:
-            logs.send("No new status")
+            
 
             embed1 = Embed(
-                title="Tracking Number: ", description=str(tracking), color=0xFF0033
+                title="No New Status", description=str(tracking), color=0xFF0033
             )
             embed1.add_field(
                 name="Expected Delivery: ", value=str(expected), inline=False
