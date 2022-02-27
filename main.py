@@ -7,7 +7,7 @@ hook = Webhook(
     "https://discord.com/api/webhooks/926197272172167178/MsQoq6fEUegMHdxZoHYnPmZoCloZTsfRHtbf74cBVre1AwWGLPqNzq4jnXcSpuXZ8wST"
 )
 logs = Webhook(
-    "https: // discord.com/api/webhooks/946621024710062140/szxUMuudVuGE0foRhGQ9GMa8XpWZPG6njM4Pu8cCxXvj8OWApT8kJshEWXtKkT3nMbk0"
+    "https://discord.com/api/webhooks/946621024710062140/szxUMuudVuGE0foRhGQ9GMa8XpWZPG6njM4Pu8cCxXvj8OWApT8kJshEWXtKkT3nMbk0"
 )
 logs.send("Online")
 
