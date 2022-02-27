@@ -38,7 +38,7 @@ link = data["data"]["tracking"]["courier_tracking_link"]
 status_time = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
 
 
-last_data = status
+last_data = status_time
 while True:
     r = requests.get(url, headers=headers)
     data = json.loads(r.text)
@@ -47,6 +47,7 @@ while True:
     expected = data["data"]["tracking"]["expected_delivery"]
     status = data["data"]["tracking"]["checkpoints"][-1]["message"]
     location = data["data"]["tracking"]["checkpoints"][-1]["location"]
+    status_time = data["data"]["tracking"]["checkpoints"][-1]["checkpoint_time"]
 
     try:
         time.sleep(1800)
@@ -66,6 +67,10 @@ while True:
 
             embed.add_field(name="Location: ", value=str(location), inline=False)
 
+            embed.add_field(
+                name="Status Updated: ", value=str(status_time), inline=False
+            )
+
             hook.send(embed=embed)
             last_data = status
         else:
@@ -79,6 +84,10 @@ while True:
             embed1.add_field(name="Status: ", value=str(status), inline=False)
 
             embed1.add_field(name="Location: ", value=str(location), inline=False)
+
+            embed1.add_field(
+                name="Status Updated: ", value=str(status_time), inline=False
+            )
             logs.send(embed=embed1)
     except BaseException as e:
 
