@@ -55,11 +55,9 @@ while True:
 
             embed = Embed(
                 title=f"Status Changed",
-                description=str(tracking)
+                description=str(tracking),
                 color=0x00FF00,
             )
-
-            
 
             embed.add_field(
                 name="Expected Delivery: ", value=str(expected), inline=False
@@ -71,7 +69,6 @@ while True:
             hook.send(embed=embed)
             last_data = status
         else:
-            
 
             embed1 = Embed(
                 title="No New Status", description=str(tracking), color=0xFF0033
