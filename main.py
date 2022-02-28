@@ -18,8 +18,8 @@ headers = {
     "Accept": "application/json",
 }
 
-tracking = "289997558187"
-carrier = "fedex"
+tracking = "YT2205921266063047"
+carrier = "yunexpress"
 url = f"https://api.aftership.com/v4/trackings/{carrier}/{tracking}"
 
 print(tracking, carrier)
@@ -65,7 +65,8 @@ while True:
             )
             embed.add_field(name="Status: ", value=str(status), inline=False)
 
-            embed.add_field(name="Location: ", value=str(location), inline=False)
+            embed.add_field(name="Location: ",
+                            value=str(location), inline=False)
 
             embed.add_field(
                 name="Status Updated: ", value=str(status_time), inline=False
@@ -83,7 +84,8 @@ while True:
             )
             embed1.add_field(name="Status: ", value=str(status), inline=False)
 
-            embed1.add_field(name="Location: ", value=str(location), inline=False)
+            embed1.add_field(name="Location: ",
+                             value=str(location), inline=False)
 
             embed1.add_field(
                 name="Status Updated: ", value=str(status_time), inline=False
